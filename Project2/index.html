@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inteligentny System Monitorowania Treningu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Inteligentny System Monitorowania Treningu</h1>
+        <form id="login-form">
+            <h2>Logowanie</h2>
+            <label for="username">Nazwa uzytkownika:</label>
+            <input type="text" id="username" required>
+            <label for="password">Haslo:</label>
+            <input type="password" id="password" required>
+            <button type="submit">Zaloguj sie</button>
+        </form>
+
+        <form id="register-form">
+            <h2>Rejestracja</h2>
+            <label for="new-username">Nazwa uzytkownika:</label>
+            <input type="text" id="new-username" required>
+            <label for="new-password">Haslo:</label>
+            <input type="password" id="new-password" required>
+            <button type="submit">Zarejestruj sie</button>
+        </form>
+
+        <div id="workout-data" style="display:none;">
+            <h2>Dane Treningu</h2>
+            <div id="data-display"></div>
+            <form id="add-workout-form">
+                <h3>Dodaj dane treningowe</h3>
+                <label for="workout-time">Czas treningu:</label>
+                <input type="text" id="workout-time" required>
+                <label for="workout-repetitions">Liczba powtorzen:</label>
+                <input type="number" id="workout-repetitions" required>
+                <label for="workout-calories">Spalone kalorie:</label>
+                <input type="number" id="workout-calories" required>
+                <label for="workout-heartRate">Tetno:</label>
+                <input type="number" id="workout-heartRate" required>
+                <button type="submit">Dodaj</button>
+            </form>
+            <button id="disconnect">Rozlacz</button>
+        </div>
+
+        <div id="personalized-plan" style="display:none;">
+            <h2>Personalizowany Plan Treningowy</h2>
+            <div id="plan-display"></div>
+            <form id="add-plan-form">
+                <h3>Dodaj plan treningowy</h3>
+                <label for="plan-content">Plan:</label>
+                <textarea id="plan-content" required></textarea>
+                <button type="submit">Dodaj</button>
+            </form>
+        </div>
+
+        <div id="history" style="display:none;">
+            <h2>Historia Treningow</h2>
+            <div id="history-display"></div>
+        </div>
+
+        <div id="notifications" style="display:none;">
+            <h2>Powiadomienia</h2>
+            <div id="notifications-display"></div>
+            <form id="add-notification-form">
+                <h3>Dodaj powiadomienie</h3>
+                <label for="notification-content">Powiadomienie:</label>
+                <textarea id="notification-content" required></textarea>
+                <button type="submit">Dodaj</button>
+            </form>
+        </div>
+    </div>
+    <script src="device-simulator.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
